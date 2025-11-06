@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kopi Senja evan - Reservasi</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #fce9cc;
+      margin: 0;
+      padding: 0;
+      color: #4a2c2a;
+    }
+
+    /* Header */
+    header {
+      background-color: #6b3e2e;
+      color: white;
+      padding: 15px 0;
+      text-align: center;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    /* Navbar */
+    nav {
+      background-color: #6b3e2e;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    /* Container */
+    .container {
+      max-width: 500px;
+      background-color: #ffe7c4;
+      margin: 30px auto;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      text-align: left;
+      color: #6b3e2e;
+      margin-bottom: 20px;
+    }
+
+    label {
+      font-weight: 500;
+      display: block;
+      margin-top: 10px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #d1b48c;
+      border-radius: 5px;
+      margin-top: 5px;
+      font-family: inherit;
+    }
+
+    input[type="radio"] {
+      width: auto;
+      margin-right: 5px;
+    }
+
+    .radio-group {
+      display: flex;
+      gap: 20px;
+      margin-top: 8px;
+    }
+
+    button {
+      background-color: #6b3e2e;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      width: 100%;
+      margin-top: 20px;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #8a4d39;
+    }
+
+    ul {
+      margin-top: 15px;
+      font-size: 14px;
+    }
+
+    table {
+      width: 100%;
+      margin-top: 10px;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 8px;
+      text-align: center;
+      border: 1px solid #c9a675;
+    }
+
+    th {
+      background-color: #f6d7a7;
+    }
+  </style>
+</head>
+<body>
+
+  <header>Kopi Senja evan</header>
+
+  <nav>
+    <a href="#">Beranda</a>
+    <a href="#">Menu</a>
+    <a href="#">Reservasi</a>
+  </nav>
+
+  <div class="container">
+    <h2>Reservasi</h2>
+
+    <form>
+      <label for="nama">Nama Lengkap</label>
+      <input type="text" id="nama" name="nama" required>
+
+      <label for="telepon">Nomor Telepon</label>
+      <input type="tel" id="telepon" name="telepon" required>
+
+      <label for="tanggal">Tanggal Reservasi</label>
+      <input type="date" id="tanggal" name="tanggal" required>
+
+      <label for="jumlah">Jumlah Orang</label>
+      <input type="number" id="jumlah" name="jumlah" min="1" required>
+
+      <label>Pilih Area</label>
+      <div class="radio-group">
+        <label><input type="radio" name="area" value="indoor"> Indoor (Non-Smoking)</label>
+        <label><input type="radio" name="area" value="outdoor"> Outdoor (Smoking)</label>
+      </div>
+
+      <label for="catatan">Catatan Tambahan</label>
+      <textarea id="catatan" name="catatan" rows="3"></textarea>
+
+      <button type="submit">Kirim Reservasi</button>
+    </form>
+
+    <ul>
+      <li>Reservasi akan kami konfirmasi melalui telepon.</li>
+      <li>Mohon datang 10 menit sebelum waktu reservasi.</li>
+      <li>Reservasi lebih dari 6 orang harap hubungi kami langsung.</li>
+    </ul>
+
+    <table>
+      <tr>
+        <th>Sesi</th>
+        <th>Waktu</th>
+      </tr>
+      <tr>
+        <td>Pagi</td>
+        <td>09:00, 10:00, 11:00</td>
+      </tr>
+      <tr>
+        <td>Siang</td>
+        <td>13:00, 14:00, 15:00</td>
+      </tr>
+      <tr>
+        <td>Malam</td>
+        <td>20:00, 21:00, 22:00</td>
+      </tr>
+    </table>
+  </div>
+
+</body>
+</html>
